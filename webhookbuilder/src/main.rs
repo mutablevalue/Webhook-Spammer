@@ -16,9 +16,11 @@ async fn main() -> Result<()> {
     let webhook = Webhook::from_url(&http, webhook_data).await?;
     let builder = ExecuteWebhook::new().content(content).username(username);
     let mut amount: i32 = 0;
+    println!("Sending webhooks")
     loop {
         webhook.execute(&http, false, builder.clone()).await?;
         amount += 1;
+        println!("Webhook Sent")
         if amount >= send_amount {
             break;
         }
