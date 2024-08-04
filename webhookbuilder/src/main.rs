@@ -5,10 +5,10 @@ use serenity::Result;
 use std::io::{self, Read};
 use tokio;
 
-const content: &str = "";
-const username: &str = "";
-const webhook_data: &str = "";
-const send_amount: i32 = 5;
+const content: &str = ""; // Input the Message you want to send
+const username: &str = ""; // input the name of the bot
+const webhook_data: &str = ""; // input the webhook itself
+const send_amount: i32 = 5; // input the amount of times you want
 
 #[tokio::main]
 async fn main() -> Result<()> {
